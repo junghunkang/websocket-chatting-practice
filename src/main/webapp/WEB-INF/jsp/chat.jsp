@@ -72,7 +72,7 @@
                     }
                 }else if(d.type == "message"){
                     if(d.sessionId == $("#sessionId").val()){
-                        $("#chating").append("<p class='me'>나 :" + d.content + "</p>");
+                        $("#chating").append("<p class='me'>나 :\n" + d.content + "</p>");
                     }else{
                         $("#chating").append("<p class='others'>" + d.userName + " :" + d.content + "</p>");
                     }

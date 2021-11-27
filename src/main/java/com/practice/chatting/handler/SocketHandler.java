@@ -25,7 +25,7 @@ public class SocketHandler extends TextWebSocketHandler {
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception{
         ChatSendMessageDto chatSendMessageDto = objectMapper.readValue(message.getPayload(), ChatSendMessageDto.class);
-        System.out.println(objectMapper.writeValueAsString(chatSendMessageDto));
+
         for(String key : sessionMap.keySet()) {
             WebSocketSession wss = sessionMap.get(key);
 
